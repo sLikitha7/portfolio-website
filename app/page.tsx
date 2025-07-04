@@ -120,25 +120,34 @@ const scrollToSection = (sectionId: string) => {
 
   const experiences = [
     {
-      title: "Graduate Data Analyst",
+      title: "Data Analyst Intern",
       company: "University of Florida",
       period: "January 2025 – Present",
       description: [
-        "Analyzed 10 years of student data (~100,000+ records) to identify enrollment trends and demographic shifts",
-        "Built Python-based preprocessing pipeline with optimized SQL queries in Snowflake, boosting data accuracy by 30%",
-        "Designed dynamic Tableau dashboards for university leadership to translate insights into actionable strategies",
-      ],
+  "Built Python-SQL pipelines on Snowflake to clean and transform 100K+ academic records, increasing data reliability by 30%",
+  "Executed advanced SQL queries to identify enrollment trends, course demand, and demographic shifts",
+  "Designed dynamic Tableau dashboards for leadership, improving data-driven curriculum planning",
+  "Automated weekly Snowflake jobs for enrollment updates, reducing manual workload by 60%",
+  "Performed cohort and time-series analysis to uncover academic patterns and guide strategic decisions",
+  "Enhanced dashboard interactivity with calculated fields and filters, improving usability for end-users",
+  "Collaborated with institutional teams to enforce data governance standards and ensure consistency",
+  "Used Python for statistical testing and segmentation to evaluate student engagement strategies"
+]
     },
     {
       title: "Data Analyst",
       company: "Vamstar Limited",
       period: "July 2022 – August 2023",
-      description: [
-        "Executed geo- and product-specific SQL queries to optimize search relevance, improving accuracy by 30%",
-        "Refined data tags through classification audits, boosting market intelligence reliability by 25%",
-        "Conducted large-scale trend analysis on MedTech data to support strategic planning",
-        "Designed client-specific Tableau dashboards for sales performance visualization",
-      ],
+     description: [
+  "Executed geo- and product-specific SQL queries to optimize search relevance, improving accuracy by 30%",
+  "Refined data tags through classification audits, boosting market intelligence reliability by 25%",
+  "Analyzed millions of MedTech procurement records to uncover industry trends and support strategic planning",
+  "Built automated Python workflows for data validation, reducing manual QA effort by 40%",
+  "Created and optimized Redshift and Snowflake schemas to support scalable reporting needs",
+  "Developed interactive Tableau dashboards for sales KPIs and campaign performance visualization",
+  "Recommended schema and indexing improvements, enhancing query performance by 20%",
+  "Delivered weekly SQL-based analytics reports to leadership, informing go-to-market strategies"
+]
     },
   ]
 
@@ -274,7 +283,7 @@ const scrollToSection = (sectionId: string) => {
                 transition={{ delay: 0.2 }}
                 className={`text-base sm:text-lg mb-3 sm:mb-4 ${isDark ? "text-gray-300" : "text-gray-600"}`}
               >
-                Hello, It's Me
+                Hello, my name is 
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -298,8 +307,7 @@ const scrollToSection = (sectionId: string) => {
                 transition={{ delay: 0.8 }}
                 className={`text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 ${isDark ? "text-gray-400" : "text-gray-600"}`}
               >
-                Passionate about transforming data into actionable insights. Experienced in machine learning, data
-                visualization, and statistical analysis with a strong background in Python, SQL, and Tableau.
+                I love working with data to find useful insights that help people make better decisions. I’ve worked on projects using tools like Python, SQL, and Tableau to analyze information, spot trends, and present it in a clear and easy-to-understand way.
               </motion.p>
 
               <motion.div
@@ -416,9 +424,11 @@ const scrollToSection = (sectionId: string) => {
               className="space-y-6 order-1 lg:order-2"
             >
               <p className={`text-base sm:text-lg ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-                I'm a passionate Data Analyst with a Master's degree in Information Systems and Operations Management
-                from the University of Florida. With hands-on experience in data analysis, machine learning, and
-                business intelligence, I transform complex datasets into actionable insights.
+                I'm a passionate Data Analyst with over 2 years of experience in turning raw data into meaningful insights. I hold a Master's degree in Information Systems and Operations Management from the University of Florida, where I'm currently working as a Data Analyst Intern for the Heavener School of Business.
+
+Previously, I worked at Vamstar, where I specialized in SQL-driven analysis, market intelligence, and dashboard reporting for the MedTech sector. My skill set includes Python, SQL, Snowflake, Tableau, and Excel, and I enjoy using these tools to uncover trends, solve problems, and support data-driven decision-making.
+
+
               </p>
 
               <div className="space-y-4">
@@ -431,7 +441,7 @@ const scrollToSection = (sectionId: string) => {
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-cyan-500 flex-shrink-0" />
                   <span className={`text-sm sm:text-base ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-                    +1 (111) 2222 3333
+                    +1 (352) 665 8676
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -495,51 +505,115 @@ const scrollToSection = (sectionId: string) => {
             >
               Skills & Expertise
             </h2>
-            <div className="w-20 h-1 bg-cyan-500 mx-auto"></div>
-          </motion.div>
+                  <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
+                  <p className={`text-base sm:text-lg max-w-2xl mx-auto ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+                    Comprehensive technical skills across data analysis, machine learning, and business intelligence
+                  </p>
+                </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {Object.entries(skills).map(([category, skillList], index) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className={`h-full ${isDark ? "bg-gray-800 border-gray-700" : "bg-white"}`}>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center space-x-3">
-                      {category.includes("Programming") && <Code className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500" />}
-                      {category.includes("Database") && <Database className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500" />}
-                      {category.includes("BI") && <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500" />}
-                      {category.includes("Machine") && <Brain className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500" />}
-                      {category.includes("Tools") && <Award className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500" />}
-                      {category.includes("Data Management") && (
-                        <Database className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500" />
-                      )}
-                      <CardTitle className={`text-sm sm:text-base ${isDark ? "text-white" : "text-gray-900"}`}>
-                        {category}
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex flex-wrap gap-2">
-                      {skillList.map((skill) => (
-                        <Badge
-                          key={skill}
-                          variant="secondary"
-                          className={`text-xs ${isDark ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-700"}`}
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                  {Object.entries(skills).map(([category, skillList], index) => (
+                    <motion.div
+                      key={category}
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        whileHover={{ y: -5, scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        className={`h-full ${isDark ? "bg-gray-800 border-gray-700" : "bg-white"} rounded-lg border shadow-lg hover:shadow-xl transition-shadow duration-300`}
+                      >
+                        <div className="p-6">
+                          <div className="flex items-center space-x-3 mb-6">
+                            <motion.div
+                              whileHover={{ rotate: 360 }}
+                              transition={{ duration: 0.6 }}
+                              className="p-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
+                            >
+                              {category.includes("Programming") && <Code className="h-6 w-6 text-white" />}
+                              {category.includes("Database") && <Database className="h-6 w-6 text-white" />}
+                              {category.includes("BI") && <BarChart3 className="h-6 w-6 text-white" />}
+                              {category.includes("Machine") && <Brain className="h-6 w-6 text-white" />}
+                              {category.includes("Tools") && <Award className="h-6 w-6 text-white" />}
+                              {category.includes("Data Management") && <Database className="h-6 w-6 text-white" />}
+                            </motion.div>
+                            <h3 className={`text-lg font-bold ${isDark ? "text-white" : "text-gray-900"}`}>{category}</h3>
+                          </div>
+
+                          <div className="grid grid-cols-1 gap-3">
+                            {skillList.map((skill, skillIndex) => (
+                              <motion.div
+                                key={skill}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{
+                                  duration: 0.5,
+                                  delay: index * 0.1 + skillIndex * 0.1,
+                                }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.05, x: 5 }}
+                                className={`group relative overflow-hidden rounded-lg p-3 transition-all duration-300 ${
+                                  isDark
+                                    ? "bg-gray-700 hover:bg-gray-600 border border-gray-600"
+                                    : "bg-gray-50 hover:bg-gray-100 border border-gray-200"
+                                }`}
+                              >
+                                <div className="flex items-center justify-between">
+                                  <span
+                                    className={`font-medium text-sm sm:text-base ${isDark ? "text-gray-200" : "text-gray-800"}`}
+                                  >
+                                    {skill}
+                                  </span>
+                                  <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${Math.random() * 30 + 70}%` }}
+                                    transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.1 + 0.3 }}
+                                    className="h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full ml-3"
+                                  />
+                                </div>
+
+                                {/* Hover effect overlay */}
+                                <motion.div
+                                  initial={{ x: "-100%" }}
+                                  whileHover={{ x: "100%" }}
+                                  transition={{ duration: 0.6 }}
+                                  className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
+                                />
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Additional Skills Summary */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  viewport={{ once: true }}
+                  className="mt-12 text-center"
+                >
+                  <div
+                    className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full ${
+                      isDark ? "bg-gray-800 border border-gray-700" : "bg-white border border-gray-200"
+                    } shadow-lg`}
+                  >
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                    >
+                      <Award className="h-5 w-5 text-cyan-500" />
+                    </motion.div>
+                    <span className={`text-sm font-medium ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+                      2+ Years of Professional Experience
+                    </span>
+                  </div>
+          </motion.div>
         </div>
       </section>
 
@@ -739,7 +813,7 @@ const scrollToSection = (sectionId: string) => {
               <h3 className={`text-lg sm:text-xl font-semibold mb-2 ${isDark ? "text-white" : "text-gray-900"}`}>
                 Phone
               </h3>
-              <p className={`text-sm sm:text-base ${isDark ? "text-gray-300" : "text-gray-600"}`}>+1 (111) 2222 3333</p>
+              <p className={`text-sm sm:text-base ${isDark ? "text-gray-300" : "text-gray-600"}`}>+1 (352) 665 8676</p>
             </motion.div>
 
             <motion.div
