@@ -1,0 +1,125 @@
+      <section id="skills" className={`py-16 sm:py-20 ${isDark ? "bg-gray-900" : "bg-gray-50"}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2
+              className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 ${isDark ? "text-white" : "text-gray-900"}`}
+            >
+              Skills & Expertise
+            </h2>
+                  <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
+                  <p className={`text-base sm:text-lg max-w-2xl mx-auto ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+                    Comprehensive technical skills across data analysis, machine learning, and business intelligence
+                  </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                  {Object.entries(skills).map(([category, skillList], index) => (
+                    <motion.div
+                      key={category}
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        whileHover={{ y: -5, scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        className={`h-full ${isDark ? "bg-gray-800 border-gray-700" : "bg-white"} rounded-lg border shadow-lg hover:shadow-xl transition-shadow duration-300`}
+                      >
+                        <div className="p-6">
+                          <div className="flex items-center space-x-3 mb-6">
+                            <motion.div
+                              whileHover={{ rotate: 360 }}
+                              transition={{ duration: 0.6 }}
+                              className="p-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
+                            >
+                              {category.includes("Programming") && <Code className="h-6 w-6 text-white" />}
+                              {category.includes("Database") && <Database className="h-6 w-6 text-white" />}
+                              {category.includes("BI") && <BarChart3 className="h-6 w-6 text-white" />}
+                              {category.includes("Machine") && <Brain className="h-6 w-6 text-white" />}
+                              {category.includes("Tools") && <Award className="h-6 w-6 text-white" />}
+                              {category.includes("Data Management") && <Database className="h-6 w-6 text-white" />}
+                            </motion.div>
+                            <h3 className={`text-lg font-bold ${isDark ? "text-white" : "text-gray-900"}`}>{category}</h3>
+                          </div>
+
+                          <div className="grid grid-cols-1 gap-3">
+                            {skillList.map((skill, skillIndex) => (
+                              <motion.div
+                                key={skill}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{
+                                  duration: 0.5,
+                                  delay: index * 0.1 + skillIndex * 0.1,
+                                }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.05, x: 5 }}
+                                className={`group relative overflow-hidden rounded-lg p-3 transition-all duration-300 ${
+                                  isDark
+                                    ? "bg-gray-700 hover:bg-gray-600 border border-gray-600"
+                                    : "bg-gray-50 hover:bg-gray-100 border border-gray-200"
+                                }`}
+                              >
+                                <div className="flex items-center justify-between">
+                                  <span
+                                    className={`font-medium text-sm sm:text-base ${isDark ? "text-gray-200" : "text-gray-800"}`}
+                                  >
+                                    {skill}
+                                  </span>
+                                  <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${Math.random() * 30 + 70}%` }}
+                                    transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.1 + 0.3 }}
+                                    className="h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full ml-3"
+                                  />
+                                </div>
+
+                                {/* Hover effect overlay */}
+                                <motion.div
+                                  initial={{ x: "-100%" }}
+                                  whileHover={{ x: "100%" }}
+                                  transition={{ duration: 0.6 }}
+                                  className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
+                                />
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Additional Skills Summary */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  viewport={{ once: true }}
+                  className="mt-12 text-center"
+                >
+                  <div
+                    className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full ${
+                      isDark ? "bg-gray-800 border border-gray-700" : "bg-white border border-gray-200"
+                    } shadow-lg`}
+                  >
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                    >
+                      <Award className="h-5 w-5 text-cyan-500" />
+                    </motion.div>
+                    <span className={`text-sm font-medium ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+                      2+ Years of Professional Experience
+                    </span>
+                  </div>
+          </motion.div>
+        </div>
+      </section>
