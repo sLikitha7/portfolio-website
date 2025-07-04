@@ -28,7 +28,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 
 export default function Portfolio() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [isContactFormOpen, setIsContactFormOpen] = useState(false)
@@ -375,7 +375,11 @@ const scrollToSection = (sectionId: string) => {
                     clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                   }}
                 >
-                  <img src="/images/profile.png" alt="Likitha Shatdarsanam" className="w-full h-full object-cover" />
+                  <img
+                    src={isDark ? "/images/profile.png" : "/images/profile2.png"}
+                    alt="Likitha Shatdarsanam"
+                    className="w-full h-full object-cover"
+                  />
                 </motion.div>
               </div>
             </motion.div>
@@ -410,7 +414,7 @@ const scrollToSection = (sectionId: string) => {
               className="order-2 lg:order-1"
             >
               <img
-                src="/images/profile.png"
+                src={isDark ? "/images/profile.png" : "/images/profile2.png"}
                 alt="About Likitha"
                 className="w-full max-w-sm sm:max-w-md mx-auto rounded-lg shadow-lg"
               />
